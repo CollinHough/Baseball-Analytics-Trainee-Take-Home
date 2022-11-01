@@ -19,6 +19,14 @@ y = train.loc[:,train.columns == "INDUCED_VERTICAL_BREAK"]
 
 # Create training and testing datasets
 X_train,X_test, y_train, y_test = train_test_split(X,y,test_size=0.2)
+
+# Fill in missing data values and discard strings/chars
+X_train.interpolate(method='linear',limit_direction='backward',inplace=True)
+X_train = X_train.select_dtypes(include='number')
+X_test.interpolate(method='linear',limit_direction='backward',inplace=True)
+X_test = X_test.select_dtypes(include='number')
+
+# Output as csv files
 X_train.to_csv('../../data/processed/X_train.csv')
 y_train.to_csv('../../data/processed/y_train.csv')
 X_test.to_csv('../../data/processed/X_test.csv')
