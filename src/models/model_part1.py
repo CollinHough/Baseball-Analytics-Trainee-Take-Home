@@ -1,6 +1,7 @@
 # Collin Hough
 # 2023 Baseball Analytics Trainee Take Home
 # PART 1
+
 import pandas as pd
 from sklearn import linear_model
 from sklearn.pipeline import make_pipeline
