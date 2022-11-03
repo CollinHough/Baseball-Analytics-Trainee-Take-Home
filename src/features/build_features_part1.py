@@ -6,8 +6,8 @@ import pandas as pd
 from sklearn.feature_selection import SelectKBest, mutual_info_regression
 
 # Load data
-X_train = pd.read_csv('../../data/processed/X_train.csv')
-y_train = pd.read_csv('../../data/processed/y_train.csv')
+X_train = pd.read_csv('../../data/processed/part1/X_train.csv')
+y_train = pd.read_csv('../../data/processed/part1/y_train.csv')
 selector = SelectKBest(mutual_info_regression, k=3)
 y_train = y_train["INDUCED_VERTICAL_BREAK"]
 

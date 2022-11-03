@@ -9,4 +9,4 @@ df = pd.read_excel('../../data/raw/2023 Analytics Internship Problem Dataset.xls
 # Get data for making predictions with the model
 data = df[df["INDUCED_VERTICAL_BREAK"].isna()]
 X_predict = data.loc[:,data.columns != "INDUCED_VERTICAL_BREAK"]
-X_predict.to_csv("../../data/processed/X_predict.csv")
+X_predict.to_csv("../../data/processed/part1/X_predict.csv")

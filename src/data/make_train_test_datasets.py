@@ -11,7 +11,7 @@ df = pd.read_excel('../../data/raw/2023 Analytics Internship Problem Dataset.xls
 
 # Get data for training and testing the model
 train = df[~df["INDUCED_VERTICAL_BREAK"].isna()]
-train.to_csv('../../data/processed/train.csv')
+train.to_csv('../../data/processed/part1/train.csv')
 
 # Split data into features and results
 X = train.loc[:,train.columns != "INDUCED_VERTICAL_BREAK"]
@@ -27,7 +27,7 @@ X_test.interpolate(method='linear',limit_direction='backward',inplace=True)
 X_test = X_test.select_dtypes(include='number')
 
 # Output as csv files
-X_train.to_csv('../../data/processed/X_train.csv')
-y_train.to_csv('../../data/processed/y_train.csv')
-X_test.to_csv('../../data/processed/X_test.csv')
-y_test.to_csv('../../data/processed/y_test.csv')
+X_train.to_csv('../../data/processed/part1/X_train.csv')
+y_train.to_csv('../../data/processed/part1/y_train.csv')
+X_test.to_csv('../../data/processed/part1/X_test.csv')
+y_test.to_csv('../../data/processed/part1/y_test.csv')

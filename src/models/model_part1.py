@@ -13,10 +13,10 @@ features = ["RELEASE_SPEED",
             "VERTICAL_APPROACH_ANGLE"]
 
 # Load in feature and results data
-X_train = pd.read_csv('../../data/processed/X_train.csv')
-X_test = pd.read_csv('../../data/processed/X_test.csv')
-y_train = pd.read_csv('../../data/processed/y_train.csv')
-y_test = pd.read_csv('../../data/processed/y_test.csv')
+X_train = pd.read_csv('../../data/processed/part1/X_train.csv')
+X_test = pd.read_csv('../../data/processed/part1/X_test.csv')
+y_train = pd.read_csv('../../data/processed/part1/y_train.csv')
+y_test = pd.read_csv('../../data/processed/part1/y_test.csv')
 
 # Clean data before training model
 X_train = X_train[features]
@@ -34,7 +34,7 @@ print("R_squared = " + str(r_squared))
 
 
 # Make prediction for INDUCED_VERTICAL_BREAK
-X_predict = pd.read_csv('../../data/processed/X_predict.csv')
+X_predict = pd.read_csv('../../data/processed/part1/X_predict.csv')
 y_pred = reg.predict(X_test)
 df = pd.DataFrame(y_pred,columns=["INDUCED_VERTICAL_BREAK_PRED"])
-df.to_csv('../../data/processed/break.csv')
+df.to_csv('../../data/processed/part1/break.csv')

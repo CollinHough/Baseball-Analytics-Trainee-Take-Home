@@ -9,8 +9,8 @@ data = pd.read_excel('../../data/raw/2023 Analytics Internship Problem Dataset.x
 # Separate data into pitcher A set and pitcher B set
 pitcher_A_data = data[data["PITCHER_KEY"] == "A"]
 pitcher_B_data = data[data["PITCHER_KEY"] == "B"]
-pitcher_A_data.to_csv('../../data/processed/pitcher_A.csv')
-pitcher_B_data.to_csv('../../data/processed/pitcher_B.csv')
+pitcher_A_data.to_csv('../../data/processed/part2/pitcher_A_data.csv')
+pitcher_B_data.to_csv('../../data/processed/part2/pitcher_B_data.csv')
 
 # Determine types of pitches each pitcher has
 pitch_types_A = pitcher_A_data.PITCH_TYPE_KEY.unique()
