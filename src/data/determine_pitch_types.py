@@ -1,6 +1,6 @@
 # Collin Hough
 # 2023 Baseball Analytics Trainee Take Home
-# PART 1
+# PART 2
 
 import pandas as pd
 
